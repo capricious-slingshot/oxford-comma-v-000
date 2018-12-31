@@ -5,7 +5,6 @@ def oxford_comma(array)
   array.each_with_index do |word, index|
 		if index == x
       word[index] = "and " + word[index]
-		elsif index[]
 		else
 			word[index] + ", "
 		end
