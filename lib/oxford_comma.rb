@@ -7,7 +7,7 @@ def oxford_comma(array)
 
 	array.each_with_index do |word, index|
     if index == 0
-			return array.join
+			next
 		elsif word == array.last
 			array[index] =  "and #{word}"
 		else
