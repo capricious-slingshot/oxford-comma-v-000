@@ -9,7 +9,7 @@ def oxford_comma(array)
     if index == 0
 			next
 		elsif word == array.last
-			array[index] =  "and #{word}"
+			array[index] =  " and #{word}"
 		else
 			array[index] =  ", #{word}"
 		end
