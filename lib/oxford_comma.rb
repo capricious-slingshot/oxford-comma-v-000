@@ -14,4 +14,5 @@ def oxford_comma(array)
 			array[index] =  ", #{word}"
 		end
 	end
+	array.join
 end
