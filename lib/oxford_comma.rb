@@ -1,13 +1,17 @@
 def oxford_comma(array)
 	return array.join if array.length == 1
-	x = array.length - 1
-	return array.join if array.length == 1
-  array.each_with_index do |word, index|
-		if index == x
-      word[index] = "and " + word[index]
+	array = array.join(", ")
+	array.last = "and #{array.last}"
+
+	array
+
+	array.each_with_index do |word, index|
+    if index == 0
+			return array.join
+		elsif word == array.last
+			array[index] =  "and #{word}"
 		else
-			word[index] + ", "
+			array[index] =  ", #{word}"
 		end
 	end
-	array
 end
